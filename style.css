@@ -89,6 +89,9 @@ main .home{
 }
 
 @media screen and (max-width:600px){
+    body{
+        overflow: hidden;
+    }    
     /* Affichage du menu burger*/
     header{
         height: 60px;
@@ -121,4 +124,5 @@ main .home{
         flex-wrap: wrap;
     }
 }
+
 
