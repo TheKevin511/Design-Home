@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Appliquer la couleur et la police d'écriture de la page */
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fef0d3;
+    color: #81552e;
+    animation: body 1s ease-in-out;
+}
+@keyframes body{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Disposition et style de l'en-tête de la page */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12%;
+    height: 100px;
+    margin-bottom: 25px;
+}
+header .logo svg{
+    display: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+header .logo svg:active{
+    transform:rotate(90deg)
+}
+/* Les éléments de la barre de navigation */
+.nav-bar nav ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+.nav-bar nav ul li a{
+    color: #61432b;
+    transition: 0.3s;
+}
+.nav-bar nav ul li a:hover{
+    color: #81552e;
+}
+/* Le button contact */
+.nav-bar nav ul .btn-contact{
+    font-family: poppins;
+    color: white;
+    background-color: #81552e;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-bar nav ul .btn-contact:hover{
+    background-color: #b1743f;
+}
+main .home{
+    text-align: center;
+    margin-bottom:60px;
+    overflow: hidden;
+}
+.home h4{
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 3.5em;
+    animation: anim-titre 1s ease-in-out;
+}
+.home h1{
+    font-size: 4em;
+    line-height: 100%;
+    animation: anim-titre 1.5s ease-in-out;
+}
+/* Disposition des premières images */
+.products{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    overflow: hidden;
+}
+/* stylisation des différentes images */
+.product img{
+    border-radius: 25px;
+    transition: 0.4s;
+    object-fit: cover;
+    animation: anim-titre 1.5s ease-in-out;
+}
+
+/* Animation du grand titre et les première images  */
+@keyframes anim-titre{
+    from{
+        opacity: 0;
+        transform: translate(20%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);  
+    }
+}
+.product img:hover{
+    width: 250px;   
+}
+@media screen and (max-width:600px){
+    /* Affichage du menu burger*/
+    header{
+        height: 60px;
+        padding: 0;
+    }
+    header .logo{
+        display: flex;
+        align-items: center;
+        padding-top: 5%;
+    }
+    main{
+        margin-top: 15%;
+    }
+    header .logo svg{
+        display: initial;
+        position: relative;
+        left: 60%;
+    }
+    /* effacer le menu de navigation */
+    .nav-bar{
+        display: none;
+    }
+    
+    /* diminuer la taille de police du nom du magasin et du titre principale */
+    .home h4{
+        font-size: 2.5em;
+    }
+    .home h1{
+        font-size: 2.1em;
+    }
+
+    /* adaptation des première image à l'écran */
+    .products{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:900px){
+    header{
+        padding: 0;
+    }
+    .nav-bar{
+        display: none;
+    }
+    header .logo{
+        display: flex;
+        align-items: center;;
+    }
+    header .logo svg{
+        display: initial;
+        position: relative;
+        left: 160%;
+    }
+    .home h1{
+        font-size: 3em;
+    }
+    .products{
+        flex-wrap: wrap;
+    }
+    
+}
